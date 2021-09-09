@@ -18,18 +18,16 @@ def fizzbuzz
     if num % 3 == 0
         if num % 5 == 0
             puts "FizzBuzz"
-            return
         else
             puts "Fizz"
-            return
         end
     elsif num % 5 == 0
         puts "Buzz"
-        return
     else
         puts num
-        return
     end
+
+    return
 end
 
 fizzbuzz
