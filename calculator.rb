@@ -1,5 +1,4 @@
 class Calculator
-
   def add(num1, num2)
     num1 + num2
   end
@@ -35,11 +34,14 @@ def run
   nerd = Calculator.new
 
   print "I'll solve anything! Gimme an equation: " 
+  
   while true
     equation = gets.chomp
+    
     if equation == "no"
       puts "uhm ok"
     end
+    
     parts = equation.split
     left_number = parts[0].to_i
     right_number = parts[2].to_i
