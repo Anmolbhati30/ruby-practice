@@ -36,19 +36,26 @@ def run
   print "I'll solve anything! Gimme an equation: " 
   
   while true
-    equation = gets.chomp
-    
-    if equation == "no"
-      puts "uhm ok"
-    end
-    
-    parts = equation.split
-    left_number = parts[0].to_i
-    right_number = parts[2].to_i
-    operand = parts[1]
+    begin
+      equation = gets.chomp
+      
+      if equation == "no"
+        puts "ok bye"
+        return
+      end
 
-    puts "Easy that's #{nerd.public_send(operand,left_number, right_number)}"
-    print "Another one: "
+      parts = equation.split
+      left_number = parts[0].to_i
+      right_number = parts[2].to_i
+      operand = parts[1]
+      
+      puts "Easy that's #{nerd.public_send(operand,left_number, right_number)}"
+      print "Another one: "
+    
+    rescue
+      puts "Uhh idk what happened"
+      return
+    end
   end
 end
 
